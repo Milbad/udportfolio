@@ -505,11 +505,8 @@ function updatePositions() {
   for (var i = 0; i < items.length; i++) {
     var phase = Math.sin((top / 1250) + (i % 5));
     //items[i].style.left = items[i].basicLeft + 100 * phase + 'px';
-    console.log(items[i].basicLeft + 100 * phase + 'px');
-     items[i].style.transform = "translateX(100px)";
-
+     items[i].style.transform = "translateX("+items[i].basicLeft + 100 * phase +"px)";
   }
-  
   // User Timing API to the rescue again. Seriously, it's worth learning.
   // Super easy to create custom metrics.
   window.performance.mark("mark_end_frame");
